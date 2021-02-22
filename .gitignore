@@ -21,3 +21,6 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+*.sublime-project
+*.sublime-workspace
+prepros.config
