@@ -1,0 +1,150 @@
+@use 'partials/fonts/dashicons';
+// Vargas font declaration
+@font-face {
+    font-family: 'Vargas';
+    src: url('fonts/vargas__-webfont.eot');
+    src: url('fonts/vargas__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/vargas__-webfont.woff2') format('woff2'),
+         url('fonts/vargas__-webfont.woff') format('woff'),
+         url('fonts/vargas__-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Colours
+$black: #000;
+$white: #fff;
+$very-pale-yellow: #fffdcc;
+$vivid-yellow: #ffca1c;
+
+// OVERRIDES
+// Media Queries
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 960px;
+    }
+}
+
+// Page Backgrounds
+body {
+    background-repeat: no-repeat;background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    // background-color:#000 !important;
+    color: $white;
+    font-size: 18px;
+}
+
+.page-container {
+    background:transparent url('img/bg-content.png') 0 0 repeat;
+    padding: 0;
+}
+
+//CSS3 FadeIn
+#page {
+  animation: fadein 5s;
+}
+@keyframes fadein {
+  from { opacity: 0}
+  to   { opacity: 1}
+}
+
+// Header
+.header {
+    background-color: $black;
+}
+
+// Titles
+.site-title, .page-title {
+    font-family: 'Vargas', 'Georgia', serif;
+    text-align: center;
+    // color: $white;
+    padding-top: 1.75em;
+    font-weight: bold;
+
+    a {
+        // color: $white;
+        color: $very-pale-yellow;
+        text-decoration: none;
+
+        &:hover, &:active, &:focus { color: $very-pale-yellow; }
+    }
+}
+.site-title {
+    color: $very-pale-yellow;
+}
+.page-title {
+    color: $white;
+    margin-bottom: .75em;
+}
+
+// Main Menu
+#mainmenu {
+    background-color: $black !important;
+    font-family: 'Vargas', 'Georgia', serif;
+    text-transform: lowercase;
+    font-weight: bold;
+
+    .nav-item {
+        .nav-link {
+            color: $very-pale-yellow;
+            padding: 1.5em 1.25em 1em;
+
+            &:hover, &:active, &:focus { color: $vivid-yellow; }
+        }
+
+        //active page menu colour
+        &.active a {
+            // text-decoration: underline;
+            color: $vivid-yellow;
+        }
+    }
+}
+
+// Content
+#content {
+    font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 0 5em 2em;
+
+    a {
+        color: $vivid-yellow;
+        text-decoration: none;
+
+        &:hover, &:active, &:focus { border-bottom: dashed 1px #ffca1c; }
+    }
+}
+
+// Footer
+.footer {
+    // background-color: $black;
+    padding: 1.5em 0 1.5em;
+
+    .socialmediacontainer {
+        text-align: center;
+
+        a {
+            color: $white;
+
+            &:hover, &:active, &:focus {
+                color: $vivid-yellow;
+                text-decoration: none;
+            }
+        }
+
+        .dashicons {
+            font-size: 32px;
+            width: 32px;
+            max-width: 100%;
+            height: auto;
+            margin: 0 .25em;
+        }
+    }
+}
+
+// Sticky Footer
+.mt-auto {
+    margin-top: auto!important;
+}
