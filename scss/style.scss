@@ -1,4 +1,6 @@
 @use 'partials/fonts/dashicons';
+// Libre Franklin font declaration
+$Libre-Franklin: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // Vargas font declaration
 @font-face {
     font-family: 'Vargas';
@@ -10,9 +12,12 @@
     font-weight: normal;
     font-style: normal;
 }
+$Vargas: 'Vargas', 'Georgia', serif;
 
 // Colours
 $black: #000;
+$black-rgb: rgb(0,0,0);
+$black-rgba: rgba(0,0,0,.3);
 $white: #fff;
 $very-pale-yellow: #fffdcc;
 $vivid-yellow: #ffca1c;
@@ -34,13 +39,14 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: #000;
+    background-color: $black;
     color: $white;
     font-size: 18px;
 }
 
 .page-container {
-    background:transparent url('img/bg-content.png') 0 0 repeat;
+    background: transparent url('img/bg-content.png') 0 0 repeat; /* Fallback */
+    background: rgba(0,0,0,.6);
     padding: 0;
 }
 
@@ -55,43 +61,56 @@ body {
 
 // Header
 .header {
-    background-color: $black;
+    background: $black-rgb; /* Fallback */
+    // background: rgba(0,0,0,.4);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.8) 15%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.8) 15%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,.8) 15%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
 // Titles
 .site-title, .page-title {
-    font-family: 'Vargas', 'Georgia', serif;
+    font-family: $Vargas;
     text-align: center;
     // color: $white;
-    padding-top: 1.75em;
     font-weight: bold;
 
     a {
-        // color: $white;
-        color: $very-pale-yellow;
+        color: $white;
+        // color: $very-pale-yellow;
         text-decoration: none;
 
         &:hover, &:active, &:focus { color: $very-pale-yellow; }
     }
 }
 .site-title {
-    color: $very-pale-yellow;
+    color: $white;
+    // color: $very-pale-yellow;
+    font-size: 2.75em;
+    margin-bottom: 0;
+    padding: 2em 0 .75em;
 }
 .page-title {
-    color: $white;
+    // color: $white;
+    color: $vivid-yellow;
     margin-bottom: .75em;
+    padding-top: 1.75em;
 }
 
 // Main Menu
 #mainmenu {
-    background-color: $black !important;
-    font-family: 'Vargas', 'Georgia', serif;
+    background: transparent !important;
+    // background: $black-rgb !important; /* Fallback */
+    // background: $black-rgba !important; /* Fallback */
+    font-family: $Vargas;
+    // font-family: $Libre-Franklin;
     text-transform: lowercase;
     font-weight: bold;
 
     .nav-item {
         .nav-link {
-            color: $very-pale-yellow;
+            color: $white;
             padding: 1.5em 1.25em 1em;
 
             &:hover, &:active, &:focus { color: $vivid-yellow; }
@@ -100,14 +119,14 @@ body {
         //active page menu colour
         &.active a {
             // text-decoration: underline;
-            color: $vivid-yellow;
+            color: $very-pale-yellow;
         }
     }
 }
 
 // Content
 #content {
-    font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $Libre-Franklin;
     padding: 0 5em 2em;
 
     a {
@@ -120,7 +139,12 @@ body {
 
 // Footer
 .footer {
-    // background-color: $black;
+    background: $black-rgb; /* Fallback */
+    // background: $black-rgba;
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
     padding: 1.5em 0 1.5em;
 
     .socialmediacontainer {

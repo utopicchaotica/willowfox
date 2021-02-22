@@ -71,6 +71,8 @@ body {
 
 .page-container {
   background: transparent url("img/bg-content.png") 0 0 repeat;
+  /* Fallback */
+  background: rgba(0, 0, 0, 0.6);
   padding: 0;
 }
 
@@ -87,17 +89,19 @@ body {
   }
 }
 .header {
-  background-color: #000;
+  background: black;
+  /* Fallback */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 15%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 }
 
 .site-title, .page-title {
   font-family: "Vargas", "Georgia", serif;
   text-align: center;
-  padding-top: 1.75em;
   font-weight: bold;
 }
 .site-title a, .page-title a {
-  color: #fffdcc;
+  color: #fff;
   text-decoration: none;
 }
 .site-title a:hover, .site-title a:active, .site-title a:focus, .page-title a:hover, .page-title a:active, .page-title a:focus {
@@ -105,29 +109,33 @@ body {
 }
 
 .site-title {
-  color: #fffdcc;
+  color: #fff;
+  font-size: 2.75em;
+  margin-bottom: 0;
+  padding: 2em 0 0.75em;
 }
 
 .page-title {
-  color: #fff;
+  color: #ffca1c;
   margin-bottom: 0.75em;
+  padding-top: 1.75em;
 }
 
 #mainmenu {
-  background-color: #000 !important;
+  background: transparent !important;
   font-family: "Vargas", "Georgia", serif;
   text-transform: lowercase;
   font-weight: bold;
 }
 #mainmenu .nav-item .nav-link {
-  color: #fffdcc;
+  color: #fff;
   padding: 1.5em 1.25em 1em;
 }
 #mainmenu .nav-item .nav-link:hover, #mainmenu .nav-item .nav-link:active, #mainmenu .nav-item .nav-link:focus {
   color: #ffca1c;
 }
 #mainmenu .nav-item.active a {
-  color: #ffca1c;
+  color: #fffdcc;
 }
 
 #content {
@@ -143,6 +151,10 @@ body {
 }
 
 .footer {
+  background: black;
+  /* Fallback */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
   padding: 1.5em 0 1.5em;
 }
 .footer .socialmediacontainer {
