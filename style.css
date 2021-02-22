@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Vargas";
+  src: url("fonts/vargas__-webfont.eot");
+  src: url("fonts/vargas__-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/vargas__-webfont.woff2") format("woff2"), url("fonts/vargas__-webfont.woff") format("woff"), url("fonts/vargas__-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 960px;
+  }
+}
+body {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+  font-size: 18px;
+}
+
+.page-container {
+  background: transparent url("img/bg-content.png") 0 0 repeat;
+  padding: 0;
+}
+
+#page {
+  animation: fadein 5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.header {
+  background-color: #000;
+}
+
+.site-title, .page-title {
+  font-family: "Vargas", "Georgia", serif;
+  text-align: center;
+  padding-top: 1.75em;
+  font-weight: bold;
+}
+.site-title a, .page-title a {
+  color: #fffdcc;
+  text-decoration: none;
+}
+.site-title a:hover, .site-title a:active, .site-title a:focus, .page-title a:hover, .page-title a:active, .page-title a:focus {
+  color: #fffdcc;
+}
+
+.site-title {
+  color: #fffdcc;
+}
+
+.page-title {
+  color: #fff;
+  margin-bottom: 0.75em;
+}
+
+#mainmenu {
+  background-color: #000 !important;
+  font-family: "Vargas", "Georgia", serif;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+#mainmenu .nav-item .nav-link {
+  color: #fffdcc;
+  padding: 1.5em 1.25em 1em;
+}
+#mainmenu .nav-item .nav-link:hover, #mainmenu .nav-item .nav-link:active, #mainmenu .nav-item .nav-link:focus {
+  color: #fffdcc;
+}
+#mainmenu .nav-item.active a {
+  color: #ffca1c;
+}
+
+#content {
+  font-family: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0 5em;
+}
+#content a {
+  color: #ffca1c;
+  text-decoration: none;
+}
+#content a:hover, #content a:active, #content a:focus {
+  border-bottom: dashed 1px #ffca1c;
+}
+
+.footer {
+  padding: 3em 0 1.5em;
+}
+.footer .socialmediacontainer {
+  text-align: center;
+}
+.footer .social-icon {
+  width: 20px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 0.25em;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
